@@ -4,28 +4,27 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Home from "./components/Home";
+import "./index.css";
+import "./App.css";
 
 export default function App() {
   return (
     <Router>
-      <div className="navagation">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="App">
+        <ul className="navigation">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
 
         <Switch>
           <Route path="/about">
