@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Contact.css";
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -36,26 +37,49 @@ export default class Contact extends React.Component {
     return (
       <div>
         <h2>Contact</h2>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Name"
-            value={this.state.name}
-            onChange={this.handleChangeName}
-          />
-          <input
-            type="text"
-            placeholder="Subject"
-            value={this.state.subject}
-            onChange={this.handleChangeSubject}
-          />
-          <input
-            type="text"
-            placeholder="Message"
-            value={this.state.URL}
-            onChange={this.handleChangeURL}
-          />
-          <button type="submit">Submit</button>
+        <h3>
+          If you'd like to make an enquiry, please feel free to get in touch
+        </h3>
+        <form onSubmit={this.handleSubmit} className="container">
+          <div className="row">
+            <div className="col-25">
+              <label>Name</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="text"
+                value={this.state.name}
+                onChange={this.handleChangeName}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Subject</label>
+            </div>
+            <div className="col-75">
+              <input
+                type="text"
+                value={this.state.subject}
+                onChange={this.handleChangeSubject}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-25">
+              <label>Message</label>
+            </div>
+            <div className="col-75">
+              <textarea
+                type="text"
+                value={this.state.URL}
+                onChange={this.handleChangeURL}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <button type="submit">Submit</button>
+          </div>
         </form>
       </div>
     );
